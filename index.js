@@ -10,23 +10,23 @@ function makeTable(rows, cols) {
   container.style.setProperty('--grid-cols', cols);
   for (i = 0; i < (rows * cols); i++){
     const cell = document.createElement('div');
-    cell.innerText = (i + 1);
+    // cell.innerText = (i + 1);
     container.appendChild(cell).className = "table";
   };
 };
 
-makeTable(16, 16);
+makeTable(50, 50);
 
-const table = document.querySelector(".table");
-table.addEventListener('click', runEvent);
+// const container = document.querySelector('.container')
+const grids = document.querySelectorAll('.table')
+grids.forEach(element => {
+  element.addEventListener('mouseenter', (e) => {
+    e.target.style.backgroundColor = randomColor();
+    console.log(e)
+  })
+});
 
-function runEvent(e) {
-  table.style.backgroundColor = "red";
-  console.log(e)
+function randomColor() {
+  var generateColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+  return generateColor;
 }
-
-
-
-
-
-
