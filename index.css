@@ -1,15 +1,16 @@
 :root {
   --grid-rows: 1;
   --grid-cols: 1;
-  
 }
 
 .container {
   display: grid;
   /* grid-gap: 1em; */
-  grid-template-rows: repeat(var(--grid-rows), auto);
-  grid-template-columns: repeat(var(--grid-cols), auto);
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
   /* border: 1px solid black; */
+  width: 960px;
+  height: auto;
 }
 
 .table {
@@ -17,4 +18,11 @@
   border: 1px solid coral;
   text-align: center;
   border: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
 }
