@@ -1,2 +1,10 @@
 # etch-a-sketch
-Making a etch-a-sketch by manipulating DOM
+
+
+Creating an etch-a-sketch with DOM manipulation.
+
+Knowledge used:
+- Event handler
+- Event listener
+- Callback function
+
