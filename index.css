@@ -1,23 +1,26 @@
 :root {
   --grid-rows: 1;
   --grid-cols: 1;
+  display: grid;
 }
 
 .container {
   display: grid;
+  
   /* grid-gap: 1em; */
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
-  /* border: 1px solid black; */
-  width: 960px;
-  height: auto;
+  /* border: 1px solid coral; */
+  /* height: 960px; */
+  height: 544px;
+  max-width: 544px;
 }
 
 .table {
   padding: 1em;
   border: 1px solid coral;
   text-align: center;
-  border: none;
+  border: 1px dashed dodgerblue;
 }
 
 header {
