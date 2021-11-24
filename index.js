@@ -21,7 +21,7 @@ makeTable(16, 16);
 const grids = document.querySelectorAll('.table')
 grids.forEach(element => {
   element.addEventListener('mouseover', (e) => {
-    e.target.style.backgroundColor = randomColor();
+    e.target.style.backgroundColor = 'black';
     // console.log(e)
   })
 });
@@ -42,3 +42,23 @@ clear.addEventListener('click', () => {
     element.style.backgroundColor = null;
   })
 })
+
+const blackButton = document.querySelector('.black-color')
+const randomizeColor = document.querySelector('.random-color')
+
+randomizeColor.addEventListener('click', () => {
+  grids.forEach(element => {
+    element.addEventListener('mouseover', (e) => {
+      e.target.style.backgroundColor = randomColor();
+    })
+  })
+})
+
+blackButton.addEventListener('click', () => {
+  grids.forEach(element => {
+    element.addEventListener('mouseover', (e) => {
+      e.target.style.backgroundColor = 'black';
+    })
+  })
+})
+
