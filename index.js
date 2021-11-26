@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const eraser = document.querySelector('.eraser')
 
 // const table = document.createElement('div');
 // table.classList.add('grid-square');
@@ -58,6 +59,14 @@ blackButton.addEventListener('click', () => {
   grids.forEach(element => {
     element.addEventListener('mouseover', (e) => {
       e.target.style.backgroundColor = 'black';
+    })
+  })
+})
+
+eraser.addEventListener('click', () => {
+  grids.forEach(element => {
+    element.addEventListener('mouseover', (e) => {
+      e.target.style.backgroundColor = "";
     })
   })
 })
