@@ -22,7 +22,7 @@ const grids = document.querySelectorAll('.table')
 grids.forEach(element => {
   element.addEventListener('mouseover', (e) => {
     e.target.style.backgroundColor = 'black';
-    // console.log(e)
+    // ellconsole.log(e)
   })
 });
 
